@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ osoba.jmeno }}</h1>
+  <p>Přijmeni: {{ osoba.prijmeni }}</p>
+<p>Vek: {{osoba.vek}} let</p>
+  <a href="{% url 'index' %}">Zpět na seznam</a>
+{% endblock %}

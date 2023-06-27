@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Seznam Lidí</h1>
+  <a href="{% url 'create' %}" >Vytvořit film</a>
+<br>
+  <table>
+    {% for osoba in lidi %}
+    <tr>
+        <td>{{ osoba }}</td>
+        <td>
+          <a href="{% url 'detail' pk=osoba.pk %}" >Detail</a>
+        </td>
+  </tr>
+    {% empty %} Žádní lidi {% endfor %}
+  </table>
+{% endblock %}
+
